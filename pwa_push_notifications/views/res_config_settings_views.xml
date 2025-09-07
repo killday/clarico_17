@@ -1,0 +1,36 @@
+<odoo>
+    <record id="res_config_settings_view_form_push" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.push</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.view_res_config_settings"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="PWA Push Notifications" string="PWA Push Notifications">
+                    <h2>Firebase Push Notifications</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="apiKey">Firebase API Key</label>
+                                <field name="apiKey"/>
+                                <label for="authDomain">Firebase Auth Domain</label>
+                                <field name="authDomain"/>
+                                <label for="projectId">Firebase Project ID</label>
+                                <field name="projectId"/>
+                                <label for="storageBucket">Firebase Storage Bucket</label>
+                                <field name="storageBucket"/>
+                                <label for="messagingSenderId">Firebase Messaging Sender ID</label>
+                                <field name="messagingSenderId"/>
+                                <label for="appId">Firebase App ID</label>
+                                <field name="appId"/>
+                                <label for="vapidKey">Web Push VAPID Key</label>
+                                <field name="vapidKey"/>
+                                <label for="service_account_path">Service Account JSON Path</label>
+                                <field name="service_account_path"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
